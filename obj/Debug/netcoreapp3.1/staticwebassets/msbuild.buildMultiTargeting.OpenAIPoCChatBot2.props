@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\OpenAIPoCChatBot2.props" />
+</Project>

@@ -1,0 +1,30 @@
+[import](common.lg)
+
+# SendActivity_Greeting()
+[Activity
+    Text = ${SendActivity_Greeting_text()}
+]
+
+# SendActivity_Greeting_text()
+- Bienvenu au ChatBot de Azure OpenAI! / Welcome to the Azure OpenAI ChatBot!
+# SendActivity_DidNotUnderstand()
+[Activity
+    Text = ${SendActivity_DidNotUnderstand_text()}
+]
+
+# SendActivity_DidNotUnderstand_text()
+- Sorry, I didn't get that.
+# ChoiceInput_Prompt_oPQVr8()
+[Activity
+    Text = ${ChoiceInput_Prompt_oPQVr8_text()}
+]
+
+# ChoiceInput_Prompt_oPQVr8_text()
+- Veuillez selectionner votre langue de préférence. / Please select your prefered language.
+# SendActivity_5fRLTY()
+[Activity
+    Text = ${SendActivity_5fRLTY_text()}
+]
+
+# SendActivity_5fRLTY_text()
+- Processing ...
