@@ -65,15 +65,42 @@
                   ]
                 },
                 {
-                  "$kind": "Microsoft.SendActivity",
+                  "$kind": "Microsoft.IfCondition",
                   "$designer": {
-                    "id": "seVsAn"
+                    "id": "pEJTQN"
                   },
-                  "activity": "${SendActivity_seVsAn()}"
+                  "condition": "=user.language == \"English\"",
+                  "actions": [
+                    {
+                      "$kind": "Microsoft.SendActivity",
+                      "$designer": {
+                        "id": "Jw2UZo"
+                      },
+                      "activity": "${SendActivity_Jw2UZo()}"
+                    }
+                  ],
+                  "elseActions": [
+                    {
+                      "$kind": "Microsoft.SendActivity",
+                      "$designer": {
+                        "id": "LhlKOx"
+                      },
+                      "activity": "${SendActivity_LhlKOx()}"
+                    }
+                  ]
                 }
               ]
             }
-          ]
+          ],
+          "value": "dialog.foreach.value"
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "wUfnY0"
+          },
+          "activityProcessed": true,
+          "dialog": "ChatGPT"
         }
       ]
     },
@@ -93,31 +120,6 @@
           "activity": "${SendActivity_DidNotUnderstand()}"
         }
       ]
-    },
-    {
-      "$kind": "Microsoft.OnActivity",
-      "$designer": {
-        "id": "Xv7ytq",
-        "name": "Activities (Activity received)"
-      },
-      "actions": [
-        {
-          "$kind": "Microsoft.SendActivity",
-          "$designer": {
-            "id": "5fRLTY"
-          },
-          "activity": "${SendActivity_5fRLTY()}"
-        }
-      ]
-    },
-    {
-      "$kind": "Microsoft.OnIntent",
-      "$designer": {
-        "id": "MXM6Y0",
-        "name": "QuestionAsked"
-      },
-      "intent": "QuestionAsked",
-      "condition": "="
     }
   ],
   "generator": "OpenAIPoCChatBot2.lg",

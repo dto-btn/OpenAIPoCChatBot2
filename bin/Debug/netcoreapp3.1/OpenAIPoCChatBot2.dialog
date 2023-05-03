@@ -63,10 +63,44 @@
                     "Français",
                     "English"
                   ]
+                },
+                {
+                  "$kind": "Microsoft.IfCondition",
+                  "$designer": {
+                    "id": "pEJTQN"
+                  },
+                  "condition": "=user.language == \"English\"",
+                  "actions": [
+                    {
+                      "$kind": "Microsoft.SendActivity",
+                      "$designer": {
+                        "id": "Jw2UZo"
+                      },
+                      "activity": "${SendActivity_Jw2UZo()}"
+                    }
+                  ],
+                  "elseActions": [
+                    {
+                      "$kind": "Microsoft.SendActivity",
+                      "$designer": {
+                        "id": "LhlKOx"
+                      },
+                      "activity": "${SendActivity_LhlKOx()}"
+                    }
+                  ]
                 }
               ]
             }
-          ]
+          ],
+          "value": "dialog.foreach.value"
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "wUfnY0"
+          },
+          "activityProcessed": true,
+          "dialog": "ChatGPT"
         }
       ]
     },
@@ -84,22 +118,6 @@
             "comment": "It is recommended to show a message to the user when the bot does not know how to handle an incoming activity and provide follow up options or a help message."
           },
           "activity": "${SendActivity_DidNotUnderstand()}"
-        }
-      ]
-    },
-    {
-      "$kind": "Microsoft.OnActivity",
-      "$designer": {
-        "id": "Xv7ytq",
-        "name": "Activities (Activity received)"
-      },
-      "actions": [
-        {
-          "$kind": "Microsoft.SendActivity",
-          "$designer": {
-            "id": "5fRLTY"
-          },
-          "activity": "${SendActivity_5fRLTY()}"
         }
       ]
     }

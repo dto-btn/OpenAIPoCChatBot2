@@ -276,3 +276,12 @@ C:\Users\TurcotG2\git\OpenAIPoCChatBot2\obj\Debug\netcoreapp3.1\OpenAIPoCChatBot
 C:\Users\TurcotG2\git\OpenAIPoCChatBot2\obj\Debug\netcoreapp3.1\OpenAIPoCChatBot2.dll
 C:\Users\TurcotG2\git\OpenAIPoCChatBot2\obj\Debug\netcoreapp3.1\OpenAIPoCChatBot2.pdb
 C:\Users\TurcotG2\git\OpenAIPoCChatBot2\obj\Debug\netcoreapp3.1\OpenAIPoCChatBot2.genruntimeconfig.cache
+C:\Users\TurcotG2\git\OpenAIPoCChatBot2\bin\Debug\netcoreapp3.1\dialogs\ChatGPT\ChatGPT.dialog
+C:\Users\TurcotG2\git\OpenAIPoCChatBot2\bin\Debug\netcoreapp3.1\dialogs\ChatGPT\recognizers\ChatGPT.en-us.lu.dialog
+C:\Users\TurcotG2\git\OpenAIPoCChatBot2\bin\Debug\netcoreapp3.1\dialogs\ChatGPT\recognizers\ChatGPT.lu.dialog
+C:\Users\TurcotG2\git\OpenAIPoCChatBot2\bin\Debug\netcoreapp3.1\dialogs\ChatGPT\recognizers\ChatGPT.lu.qna.dialog
+C:\Users\TurcotG2\git\OpenAIPoCChatBot2\bin\Debug\netcoreapp3.1\dialogs\ChatGPT\language-generation\en-us\ChatGPT.en-us.lg
+C:\Users\TurcotG2\git\OpenAIPoCChatBot2\bin\Debug\netcoreapp3.1\dialogs\ChatGPT\language-understanding\en-us\ChatGPT.en-us.lu
+C:\Users\TurcotG2\git\OpenAIPoCChatBot2\bin\Debug\netcoreapp3.1\generated\interruption\ChatGPT.en-us.lu
+C:\Users\TurcotG2\git\OpenAIPoCChatBot2\bin\Debug\netcoreapp3.1\dialogs\ChatGPT\knowledge-base\en-us\ChatGPT.en-us.qna
+C:\Users\TurcotG2\git\OpenAIPoCChatBot2\bin\Debug\netcoreapp3.1\generated\interruption\ChatGPT.en-us.qna
