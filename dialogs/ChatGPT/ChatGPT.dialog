@@ -21,7 +21,7 @@
           "$designer": {
             "id": "BqH8AI"
           },
-          "condition": "=user.language == \"English\"",
+          "condition": "=user.lang== \"en\"",
           "actions": [
             {
               "$kind": "Microsoft.TextInput",
@@ -60,12 +60,13 @@
         {
           "$kind": "Microsoft.HttpRequest",
           "$designer": {
-            "id": "0WdFGZ"
+            "id": "0WdFGZ",
+            "comment": "https://scdc-cio-dto-openai-poc-app--5mq2032.whitesea-a2edc9e0.canadacentral.azurecontainerapps.io/query"
           },
           "resultProperty": "turn.results",
           "method": "POST",
-          "url": "https://scdc-cio-dto-openai-poc-app--5mq2032.whitesea-a2edc9e0.canadacentral.azurecontainerapps.io/query",
-          "body": "{\"query\":\"${user.prompt}\"}",
+          "url": "http://127.0.0.1:5000/query",
+          "body": "{\"query\":\"${user.prompt}\",\"lang\":\"${user.lang}\"}",
           "responseType": "json",
           "contentType": "application/json"
         },
@@ -82,6 +83,13 @@
             "id": "7nTagq"
           },
           "property": "user.prompt"
+        },
+        {
+          "$kind": "Microsoft.RepeatDialog",
+          "$designer": {
+            "id": "FDANOA"
+          },
+          "activityProcessed": true
         }
       ]
     }

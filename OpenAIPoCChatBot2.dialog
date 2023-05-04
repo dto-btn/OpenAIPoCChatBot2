@@ -56,7 +56,9 @@
                   "defaultValueResponse": "",
                   "prompt": "${ChoiceInput_Prompt_oPQVr8()}",
                   "choiceOptions": {
-                    "includeNumbers": true
+                    "includeNumbers": true,
+                    "inlineOrMore": ", or ",
+                    "inlineOr": " or "
                   },
                   "property": "user.language",
                   "choices": [
@@ -72,6 +74,14 @@
                   "condition": "=user.language == \"English\"",
                   "actions": [
                     {
+                      "$kind": "Microsoft.SetProperty",
+                      "$designer": {
+                        "id": "nCEbrf"
+                      },
+                      "property": "user.lang",
+                      "value": "en"
+                    },
+                    {
                       "$kind": "Microsoft.SendActivity",
                       "$designer": {
                         "id": "Jw2UZo"
@@ -80,6 +90,14 @@
                     }
                   ],
                   "elseActions": [
+                    {
+                      "$kind": "Microsoft.SetProperty",
+                      "$designer": {
+                        "id": "IZkHzY"
+                      },
+                      "property": "user.lang",
+                      "value": "fr"
+                    },
                     {
                       "$kind": "Microsoft.SendActivity",
                       "$designer": {
