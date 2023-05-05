@@ -61,11 +61,11 @@
           "$kind": "Microsoft.HttpRequest",
           "$designer": {
             "id": "0WdFGZ",
-            "comment": "https://scdc-cio-dto-openai-poc-app--5mq2032.whitesea-a2edc9e0.canadacentral.azurecontainerapps.io/query"
+            "comment": "http://127.0.0.1:5000/query"
           },
           "resultProperty": "turn.results",
           "method": "POST",
-          "url": "http://127.0.0.1:5000/query",
+          "url": "https://scdc-cio-dto-openai-poc-app--xl172fc.whitesea-a2edc9e0.canadacentral.azurecontainerapps.io/query",
           "body": "{\"query\":\"${user.prompt}\",\"lang\":\"${user.lang}\"}",
           "responseType": "json",
           "contentType": "application/json"

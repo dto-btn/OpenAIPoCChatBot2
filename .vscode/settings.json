@@ -6,5 +6,5 @@
         ".vscode{,/**}"
     ],
     "appService.showBuildDuringDeployPrompt": false,
-    "appService.defaultWebAppToDeploy": "/subscriptions/6425f0ed-3443-4139-8361-9b8d3951d43e/resourceGroups/ScDc-CIO-DTO-OpenAI-PoC-rg/providers/Microsoft.Web/sites/ScDc-CIO-DTO-OpenAI-PoC-wa"
+    "appService.defaultWebAppToDeploy": ""
 }

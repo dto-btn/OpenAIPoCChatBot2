@@ -1,3 +1,6 @@
 # files generated during the lubuild process
 generated/
 bin/*
+.vscode/
+bin/*
+obj/*

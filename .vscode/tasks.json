@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/OpenAIPoCChatBot2.csproj",
+                "OpenAIPoCChatBot2.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/OpenAIPoCChatBot2.csproj",
+                "OpenAIPoCChatBot2.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/OpenAIPoCChatBot2.csproj"
+                "OpenAIPoCChatBot2.csproj"
             ],
             "problemMatcher": "$msCompile"
         },
@@ -43,7 +43,7 @@
             "type": "process",
             "args": [
                 "clean",
-                "${workspaceFolder}",
+                "OpenAIPoCChatBot2.sln",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -55,7 +55,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}",
+                "OpenAIPoCChatBot2.sln",
                 "--configuration",
                 "Release",
                 "/property:GenerateFullPaths=true",
