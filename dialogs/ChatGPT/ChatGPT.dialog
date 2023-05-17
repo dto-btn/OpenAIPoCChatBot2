@@ -5,7 +5,7 @@
     "name": "ChatGPT",
     "comment": ""
   },
-  "autoEndDialog": true,
+  "autoEndDialog": false,
   "defaultResultProperty": "dialog.result",
   "triggers": [
     {
@@ -61,12 +61,12 @@
           "$kind": "Microsoft.HttpRequest",
           "$designer": {
             "id": "0WdFGZ",
-            "comment": "http://127.0.0.1:5000/query"
+            "comment": "http://127.0.0.1:5000/query\nhttps://scdc-cio-dto-openai-poc-app--xl172fc.whitesea-a2edc9e0.canadacentral.azurecontainerapps.io/query"
           },
           "resultProperty": "turn.results",
           "method": "POST",
-          "url": "https://scdc-cio-dto-openai-poc-app--xl172fc.whitesea-a2edc9e0.canadacentral.azurecontainerapps.io/query",
-          "body": "{\"query\":\"${user.prompt}\",\"lang\":\"${user.lang}\"}",
+          "url": "http://127.0.0.1:5000/query",
+          "body": "{\"query\":\"${user.prompt}\",\"lang\":\"${user.lang}\", \"index\": [\"${user.index}\"]}",
           "responseType": "json",
           "contentType": "application/json"
         },
@@ -78,18 +78,19 @@
           "activity": "${SendActivity_bdOB2G()}"
         },
         {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "0rAY5k"
+          },
+          "activity": "${SendActivity_0rAY5k()}",
+          "disabled": true
+        },
+        {
           "$kind": "Microsoft.DeleteProperty",
           "$designer": {
             "id": "7nTagq"
           },
           "property": "user.prompt"
-        },
-        {
-          "$kind": "Microsoft.RepeatDialog",
-          "$designer": {
-            "id": "FDANOA"
-          },
-          "activityProcessed": true
         }
       ]
     }

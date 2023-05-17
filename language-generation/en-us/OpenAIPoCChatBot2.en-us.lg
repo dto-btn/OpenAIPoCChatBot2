@@ -7,13 +7,6 @@
 
 # SendActivity_Greeting_text()
 - Bienvenu au ChatBot de Azure OpenAI! / Welcome to the Azure OpenAI ChatBot!
-# SendActivity_DidNotUnderstand()
-[Activity
-    Text = ${SendActivity_DidNotUnderstand_text()}
-]
-
-# SendActivity_DidNotUnderstand_text()
-- Sorry, I didn't get that.
 # ChoiceInput_Prompt_oPQVr8()
 [Activity
     Text = ${ChoiceInput_Prompt_oPQVr8_text()}
@@ -27,7 +20,7 @@
 ]
 
 # SendActivity_Jw2UZo_text()
-- DISCLAIMER: This ChatBot uses Azure OpenAI services. Answers may be incorect even when they look credible. AI can make mistakes just like an humans do. DO NOT SEND ANY PROTECTED INFORMATION IN THE CHATBOT.
+- DISCLAIMER: This ChatBot uses Azure OpenAI services. Answers may be incorect even when they look credible. AI can make mistakes just like humans do. DO NOT SEND ANY PROTECTED INFORMATION IN THE CHATBOT.
 # SendActivity_LhlKOx()
 [Activity
     Text = ${SendActivity_LhlKOx_text()}
@@ -35,3 +28,19 @@
 
 # SendActivity_LhlKOx_text()
 - AVIS DE NON\-RESPONSABILITÉ : Ce ChatBot utilise les services Azure OpenAI. Les réponses peuvent être incorrectes même si elles semblent crédibles. L'IA peut faire des erreurs comme le font les humains. N'ENVOYEZ AUCUNE INFORMATION PROTÉGÉE DANS LE CHATBOT.
+# Ask_Activity_KTrfhg()
+[Activity
+    Attachments = ${Ask_Activity_KTrfhg_attachment_pODqRy()}
+]
+
+# Ask_Activity_KTrfhg_attachment_pODqRy()
+> To learn more about the LG file format, read the documentation at
+> https://aka.ms/lg-file-format
+- $(IndexChoice())
+# SendActivity_L3poEd()
+[Activity
+    Text = ${SendActivity_L3poEd_text()}
+]
+
+# SendActivity_L3poEd_text()
+- Invalid index! ${user.index}

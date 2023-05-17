@@ -1,0 +1,29 @@
+[import](common.lg)
+
+# PickIndex()
+[HeroCard
+  title = Index choice 
+  text = Please select which index you would like the bot to use for your questions. You can use "Use Index: NAME" at any time to switch index.
+  buttons = ${basic('ITSM')} | ${basic('EVEC')} | ${basic('SSCPlus')}
+]
+
+# basic(value)
+[CardAction
+	title = ${value}
+  type = imBack
+  value = Use Index: ${value}
+]
+# SendActivity_qKh0is()
+[Activity
+    Text = ${SendActivity_qKh0is_text()}
+]
+
+# SendActivity_qKh0is_text()
+- French
+# SendActivity_U6wurV()
+[Activity
+    Attachments = ${SendActivity_U6wurV_attachment_VD1Kzx()}
+]
+
+# SendActivity_U6wurV_attachment_VD1Kzx()
+- ${PickIndex()}

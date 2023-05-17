@@ -20,7 +20,30 @@
 # SendActivity_bdOB2G()
 [Activity
     Text = ${SendActivity_bdOB2G_text()}
+    Attachments = ${SendActivity_bdOB2G_attachment_DtQFvK()}
 ]
 
+# ResponseCard(content)
+[HeroCard
+	buttons = ${ShowLikeButton('Useful👍')} | ${ShowLikeButton('Not usefull👎')}
+    text = ${join(foreach(foreach(json(turn.results.content.metadata), x, json(x.value)), y, y.filename), ", \n\n")}
+    title = Source(s)
+    type = invoke
+]
+# SendActivity_bdOB2G_attachment_DtQFvK()
+- ${ResponseCard(turn.results.content)}
 # SendActivity_bdOB2G_text()
 - ${turn.results.content.answer}
+# SendActivity_0rAY5k()
+[Activity
+    Text = ${SendActivity_0rAY5k_text()}
+]
+
+# SendActivity_0rAY5k_text()
+- ${join(foreach(foreach(json(turn.results.content.metadata), x, json(x.value)), y, y.filename), ",")}
+# ShowLikeButton(text)
+[CardAction
+    title = ${text}
+    type = messageBack
+    value = ${{'user.feedback': 'text'}}
+]

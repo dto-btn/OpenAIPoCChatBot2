@@ -1,5 +1,5 @@
 {
   "$kind": "Microsoft.MultiLanguageRecognizer",
-  "id": "LUIS_OpenAIPoCChatBot2",
+  "id": "LUIS_IndexChoice",
   "recognizers": {}
 }

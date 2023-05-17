@@ -1,0 +1,50 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "pevPZj",
+    "name": "IndexChoice",
+    "comment": ""
+  },
+  "autoEndDialog": false,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "lqarJM"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "gQgBry"
+          },
+          "condition": "=user.lang== \"en\"",
+          "elseActions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "qKh0is"
+              },
+              "activity": "${SendActivity_qKh0is()}"
+            }
+          ],
+          "actions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "U6wurV"
+              },
+              "activity": "${SendActivity_U6wurV()}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "generator": "IndexChoice.lg",
+  "recognizer": "IndexChoice.lu.qna",
+  "id": "IndexChoice"
+}

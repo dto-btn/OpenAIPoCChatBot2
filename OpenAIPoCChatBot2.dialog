@@ -115,32 +115,133 @@
         {
           "$kind": "Microsoft.BeginDialog",
           "$designer": {
-            "id": "wUfnY0"
+            "id": "cVx2Qt"
           },
-          "activityProcessed": true,
-          "dialog": "ChatGPT"
+          "activityProcessed": false,
+          "dialog": "IndexChoice"
         }
       ]
     },
     {
-      "$kind": "Microsoft.OnUnknownIntent",
+      "$kind": "Microsoft.OnIntent",
       "$designer": {
-        "id": "mb2n1u",
-        "comment": "This trigger fires when an incoming activity is not handled by any other trigger."
+        "id": "Utgozs",
+        "name": "IndexSelected"
       },
+      "intent": "IndexSelected",
       "actions": [
         {
-          "$kind": "Microsoft.SendActivity",
+          "$kind": "Microsoft.SetProperty",
           "$designer": {
-            "id": "kMjqz1",
-            "comment": "It is recommended to show a message to the user when the bot does not know how to handle an incoming activity and provide follow up options or a help message."
+            "id": "FWqXcZ"
           },
-          "activity": "${SendActivity_DidNotUnderstand()}"
+          "property": "dialog.indexName",
+          "value": "${toLower(@indexName)}"
+        },
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "ob3ETu"
+          },
+          "cases": [
+            {
+              "value": "itsm",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SetProperty",
+                  "$designer": {
+                    "id": "RZa5vK"
+                  },
+                  "property": "user.index",
+                  "value": "itsm"
+                }
+              ]
+            },
+            {
+              "value": "evec",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SetProperty",
+                  "$designer": {
+                    "id": "Zz1sNR"
+                  },
+                  "property": "user.index",
+                  "value": "evec"
+                }
+              ]
+            },
+            {
+              "value": "sscplus",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SetProperty",
+                  "$designer": {
+                    "id": "4weuIC"
+                  },
+                  "property": "user.index",
+                  "value": "sscplus"
+                }
+              ]
+            }
+          ],
+          "default": [
+            {
+              "$kind": "Microsoft.SetProperty",
+              "$designer": {
+                "id": "iMHCbE"
+              },
+              "property": "user.index",
+              "value": "none"
+            }
+          ],
+          "condition": "dialog.indexName"
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "iDvBT5"
+          },
+          "condition": "=string(user.index) != \"none\"",
+          "actions": [
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "IfTBCz"
+              },
+              "activityProcessed": true,
+              "dialog": "ChatGPT"
+            }
+          ],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "L3poEd"
+              },
+              "activity": "${SendActivity_L3poEd()}"
+            },
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "t3CaIh"
+              },
+              "activityProcessed": true,
+              "dialog": "IndexChoice"
+            }
+          ]
         }
       ]
     }
   ],
   "generator": "OpenAIPoCChatBot2.lg",
   "id": "OpenAIPoCChatBot2",
-  "recognizer": "OpenAIPoCChatBot2.lu.qna"
+  "recognizer": {
+    "$kind": "Microsoft.RegexRecognizer",
+    "intents": [
+      {
+        "intent": "IndexSelected",
+        "pattern": "Use index: (?<indexName>.*)"
+      }
+    ]
+  }
 }
