@@ -118,7 +118,16 @@
             "id": "cVx2Qt"
           },
           "activityProcessed": false,
-          "dialog": "IndexChoice"
+          "dialog": "IndexChoice",
+          "disabled": true
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "AV9cnr"
+          },
+          "activityProcessed": true,
+          "dialog": "ChatGPT"
         }
       ]
     },

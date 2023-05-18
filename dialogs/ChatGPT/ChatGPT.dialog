@@ -5,7 +5,6 @@
     "name": "ChatGPT",
     "comment": ""
   },
-  "autoEndDialog": false,
   "defaultResultProperty": "dialog.result",
   "triggers": [
     {
@@ -65,17 +64,43 @@
           },
           "resultProperty": "turn.results",
           "method": "POST",
-          "url": "http://127.0.0.1:5000/query",
-          "body": "{\"query\":\"${user.prompt}\",\"lang\":\"${user.lang}\", \"index\": [\"${user.index}\"]}",
+          "url": "https://scdc-cio-dto-openai-poc-app--v1-0-0.whitesea-a2edc9e0.canadacentral.azurecontainerapps.io/query",
+          "body": "{\"query\":\"${user.prompt}\",\"lang\":\"${user.lang}\", \"index\": [\"unstructureddocs-all\"], \"pretty\": true}",
           "responseType": "json",
           "contentType": "application/json"
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "0859UY"
+          },
+          "condition": "=json(turn.results.content.metadata) != \"\"",
+          "actions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "yy1qbW"
+              },
+              "activity": "${SendActivity_yy1qbW()}"
+            }
+          ],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "Q01s8E"
+              },
+              "activity": "${SendActivity_Q01s8E()}"
+            }
+          ]
         },
         {
           "$kind": "Microsoft.SendActivity",
           "$designer": {
             "id": "bdOB2G"
           },
-          "activity": "${SendActivity_bdOB2G()}"
+          "activity": "${SendActivity_bdOB2G()}",
+          "disabled": true
         },
         {
           "$kind": "Microsoft.SendActivity",
@@ -91,11 +116,20 @@
             "id": "7nTagq"
           },
           "property": "user.prompt"
+        },
+        {
+          "$kind": "Microsoft.RepeatDialog",
+          "$designer": {
+            "id": "3N4aTZ"
+          },
+          "activityProcessed": true
         }
-      ]
+      ],
+      "runOnce": false
     }
   ],
   "generator": "ChatGPT.lg",
   "recognizer": "ChatGPT.lu.qna",
-  "id": "ChatGPT"
+  "id": "ChatGPT",
+  "autoEndDialog": false
 }
