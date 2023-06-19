@@ -63,3 +63,10 @@
 - ${turn.results.content.answer}
 # SendActivity_yy1qbW_attachment_hWNgJ9()
 - ${ResponseCard(turn.results.content)}
+# SendActivity_MpJrnY()
+[Activity
+    Text = ${SendActivity_MpJrnY_text()}
+]
+
+# SendActivity_MpJrnY_text()
+- ${user.history}
