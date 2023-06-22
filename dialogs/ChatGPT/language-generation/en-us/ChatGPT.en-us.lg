@@ -27,6 +27,13 @@
 [HeroCard
     text = ${join(foreach(turn.results.content.metadata, x, x), ", \n\n")}
     title = Source(s)
+    buttons = ${ShowFeedbackButton()}
+]
+# ShowFeedbackButton()
+[CardAction
+    title = Commentaire/Feedback
+    type = openUrl
+    value = https://forms.office.com/r/dPvsZykMSy
 ]
 # SendActivity_bdOB2G_attachment_DtQFvK()
 - ${ResponseCard(turn.results.content)}
@@ -70,3 +77,7 @@
 
 # SendActivity_MpJrnY_text()
 - ${user.history}
+# SendActivity_gjnqTh()
+[Activity
+    Type = typing
+]

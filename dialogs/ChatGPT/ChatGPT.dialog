@@ -65,6 +65,13 @@
           "disabled": true
         },
         {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "gjnqTh"
+          },
+          "activity": "${SendActivity_gjnqTh()}"
+        },
+        {
           "$kind": "Microsoft.HttpRequest",
           "$designer": {
             "id": "0WdFGZ",
@@ -73,7 +80,7 @@
           "resultProperty": "turn.results",
           "method": "POST",
           "url": "http://127.0.0.1:5000/query",
-          "body": "{\"query\":\"${user.prompt}\",\"lang\":\"${user.lang}\", \"pretty\": true, \"temp\": 0, \"chat_history\": \"${user.history}\", \"k\":3}",
+          "body": "{\"query\":\"${user.prompt}\",\"lang\":\"${user.lang}\", \"pretty\": true, \"temp\": 0, \"k\":3}",
           "responseType": "json",
           "contentType": "application/json"
         },
