@@ -75,12 +75,12 @@
           "$kind": "Microsoft.HttpRequest",
           "$designer": {
             "id": "0WdFGZ",
-            "comment": "http://127.0.0.1:5000/query\nhttps://scdc-cio-dto-openai-poc-app--v3-0-0.whitesea-a2edc9e0.canadacentral.azurecontainerapps.io/query"
+            "comment": "http://127.0.0.1:5000/query\nhttps://scdc-cio-dto-openai-poc-app--7enu3fu.whitesea-a2edc9e0.canadacentral.azurecontainerapps.io/query"
           },
           "resultProperty": "turn.results",
           "method": "POST",
-          "url": "http://127.0.0.1:5000/query",
-          "body": "{\"query\":\"${user.prompt}\",\"lang\":\"${user.lang}\", \"pretty\": true, \"temp\": 0, \"k\":3}",
+          "url": "https://scdc-cio-dto-openai-poc-app--7enu3fu.whitesea-a2edc9e0.canadacentral.azurecontainerapps.io/query",
+          "body": "{\"query\":\"${user.prompt}\",\"lang\":\"${user.lang}\", \"pretty\": true, \"temp\": 0, \"k\":3, \"history\": \"${user.history}\"}",
           "responseType": "json",
           "contentType": "application/json"
         },
