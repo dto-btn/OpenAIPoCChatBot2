@@ -1,0 +1,38 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.16",
+    "version": "0.0.1",
+    "id": "c6bc6953-f1f1-406b-a6ef-4d4282bb6ddf",
+    "developer": {
+        "name": "SSC/CIO/DTO-ECT",
+        "websiteUrl": "https://www.canada.ca/en/shared-services.html",
+        "privacyUrl": "https://www.teams.com/privacy",
+        "termsOfUseUrl": "https://www.teams.com/termsofuse"
+    },
+    "name": {
+        "short": "OpenAI PoC Chatbot",
+        "full": "Azure OpenAI proof of concept chatbot"
+    },
+    "description": {
+        "short": "OpenAI PoC Chatbot DEV",
+        "full": "Uses Azure OpenAI and Langchain and Llama index"
+    },
+    "icons": {
+        "outline": "outline.png",
+        "color": "color.png"
+    },
+    "accentColor": "#FFFFFF",
+    "bots": [
+        {
+            "botId": "c6bc6953-f1f1-406b-a6ef-4d4282bb6ddf",
+            "scopes": [
+                "personal"
+            ],
+            "needsChannelSelector": false,
+            "isNotificationOnly": false,
+            "supportsFiles": false,
+            "supportsCalling": false,
+            "supportsVideo": false
+        }
+    ]
+}

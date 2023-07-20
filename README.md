@@ -20,3 +20,9 @@ with:
   "MicrosoftAppId": "c6bc6953-f1f1-406b-a6ef-4d4282bb6ddf",
   "MicrosoftAppTenantId": "d05bc194-94bf-4ad6-ae2e-1db0f2e38f5e",
 ```
+
+## Build (todo)
+
+This should be automated in a github ci flow.
+
+These are the instructions to manually build and release the bot so it can be used as part of the `chatbot-infra` project when deploying to the cloud.
