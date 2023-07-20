@@ -79,5 +79,5 @@
 - ${user.history}
 # SendActivity_gjnqTh()
 [Activity
-    Type = typing
+    Type = typing 
 ]
