@@ -79,10 +79,11 @@
           },
           "resultProperty": "turn.results",
           "method": "POST",
-          "url": "https://scdc-cio-dto-openai-poc-app--7enu3fu.whitesea-a2edc9e0.canadacentral.azurecontainerapps.io/query",
-          "body": "{\"query\":\"${user.prompt}\",\"lang\":\"${user.lang}\", \"pretty\": true, \"temp\": 0, \"k\":3, \"history\": \"${user.history}\"}",
+          "body": "{\"query\":\"${user.prompt}\",\"lang\":\"${user.lang}\", \"pretty\": true, \"temp\": 0.7, \"k\":2, \"history\": \"${user.history}\"}",
           "responseType": "json",
-          "contentType": "application/json"
+          "contentType": "application/json",
+          "url": "${settings.openai-api-endpoint}",
+          "disabled": false
         },
         {
           "$kind": "Microsoft.SetProperty",
