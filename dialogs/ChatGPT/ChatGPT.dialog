@@ -82,7 +82,7 @@
           "body": "{\"query\":\"${user.prompt}\",\"lang\":\"${user.lang}\", \"pretty\": true, \"temp\": 0.7, \"k\":2, \"history\": \"${user.history}\"}",
           "responseType": "json",
           "contentType": "application/json",
-          "url": "${settings.openaiApiEndpoint}",
+          "url": "${settings.OpenaiApiEndpoint}",
           "disabled": false
         },
         {
