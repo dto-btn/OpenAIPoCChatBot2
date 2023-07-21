@@ -4,3 +4,4 @@ bin/*
 .vscode/
 bin/*
 obj/*
+deploy.zip

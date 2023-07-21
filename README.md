@@ -25,4 +25,4 @@ with:
 
 This should be automated in a github ci flow.
 
-These are the instructions to manually build and release the bot so it can be used as part of the `chatbot-infra` project when deploying to the cloud.
+As of now this project is pulled directly from github via terraform and deployed to the windows App Service app.
