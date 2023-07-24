@@ -1,20 +1,20 @@
 {
     "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
     "manifestVersion": "1.16",
-    "version": "0.0.1",
-    "id": "c6bc6953-f1f1-406b-a6ef-4d4282bb6ddf",
+    "version": "1.0.1",
+    "id": "243f8dd8-e985-45dc-a214-8725c77468c1",
     "developer": {
-        "name": "SSC/CIO/DTO-ECT",
+        "name": "SSC/CIO/DTO/ECT",
         "websiteUrl": "https://www.canada.ca/en/shared-services.html",
         "privacyUrl": "https://www.teams.com/privacy",
         "termsOfUseUrl": "https://www.teams.com/termsofuse"
     },
     "name": {
-        "short": "OpenAI PoC Chatbot",
-        "full": "Azure OpenAI proof of concept chatbot"
+        "short": "Azure OpenAI Chatbot",
+        "full": "Azure OpenAI Chatbot Pilot"
     },
     "description": {
-        "short": "OpenAI PoC Chatbot DEV",
+        "short": "Azure Open AI Chatbot pilot",
         "full": "Uses Azure OpenAI and Langchain and Llama index"
     },
     "icons": {
@@ -24,7 +24,7 @@
     "accentColor": "#FFFFFF",
     "bots": [
         {
-            "botId": "c6bc6953-f1f1-406b-a6ef-4d4282bb6ddf",
+            "botId": "243f8dd8-e985-45dc-a214-8725c77468c1",
             "scopes": [
                 "personal"
             ],
