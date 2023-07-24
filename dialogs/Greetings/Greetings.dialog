@@ -1,0 +1,114 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "TuZA4q",
+    "name": "Greetings",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "I5wSnc"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.DeleteProperty",
+          "$designer": {
+            "id": "tvbTTb"
+          },
+          "property": "user.language"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "2Rw21J",
+            "name": "Send a response"
+          },
+          "activity": "${SendActivity_2Rw21J()}"
+        },
+        {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "TQU0dV"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "prompt": "${ChoiceInput_Prompt_TQU0dV()}",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or "
+          },
+          "property": "user.language",
+          "choices": [
+            "Français",
+            "English"
+          ]
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "6jtIhg"
+          },
+          "condition": "=user.language == \"English\"",
+          "actions": [
+            {
+              "$kind": "Microsoft.SetProperty",
+              "$designer": {
+                "id": "YYa3h4"
+              },
+              "property": "user.lang",
+              "value": "en"
+            },
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "TRzpeP"
+              },
+              "activity": "${SendActivity_TRzpeP()}"
+            }
+          ],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.SetProperty",
+              "$designer": {
+                "id": "PizDPN"
+              },
+              "property": "user.lang",
+              "value": "fr"
+            },
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "NfYpDr"
+              },
+              "activity": "${SendActivity_NfYpDr()}"
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.ReplaceDialog",
+          "$designer": {
+            "id": "kcvznY"
+          },
+          "activityProcessed": true,
+          "dialog": "ChatGPT"
+        }
+      ]
+    }
+  ],
+  "generator": "Greetings.lg",
+  "recognizer": "Greetings.lu.qna",
+  "id": "Greetings"
+}

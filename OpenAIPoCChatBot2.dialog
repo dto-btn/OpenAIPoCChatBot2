@@ -34,78 +34,12 @@
               "condition": "=string(dialog.foreach.value.id) != string(turn.Activity.Recipient.id)",
               "actions": [
                 {
-                  "$kind": "Microsoft.SendActivity",
+                  "$kind": "Microsoft.BeginDialog",
                   "$designer": {
-                    "id": "859266",
-                    "name": "Send a response"
+                    "id": "JtOXlT"
                   },
-                  "activity": "${SendActivity_Greeting()}"
-                },
-                {
-                  "$kind": "Microsoft.ChoiceInput",
-                  "$designer": {
-                    "id": "oPQVr8"
-                  },
-                  "defaultLocale": "en-us",
-                  "disabled": false,
-                  "maxTurnCount": 3,
-                  "alwaysPrompt": false,
-                  "allowInterruptions": false,
-                  "unrecognizedPrompt": "",
-                  "invalidPrompt": "",
-                  "defaultValueResponse": "",
-                  "prompt": "${ChoiceInput_Prompt_oPQVr8()}",
-                  "choiceOptions": {
-                    "includeNumbers": true,
-                    "inlineOrMore": ", or ",
-                    "inlineOr": " or "
-                  },
-                  "property": "user.language",
-                  "choices": [
-                    "Français",
-                    "English"
-                  ]
-                },
-                {
-                  "$kind": "Microsoft.IfCondition",
-                  "$designer": {
-                    "id": "pEJTQN"
-                  },
-                  "condition": "=user.language == \"English\"",
-                  "actions": [
-                    {
-                      "$kind": "Microsoft.SetProperty",
-                      "$designer": {
-                        "id": "nCEbrf"
-                      },
-                      "property": "user.lang",
-                      "value": "en"
-                    },
-                    {
-                      "$kind": "Microsoft.SendActivity",
-                      "$designer": {
-                        "id": "Jw2UZo"
-                      },
-                      "activity": "${SendActivity_Jw2UZo()}"
-                    }
-                  ],
-                  "elseActions": [
-                    {
-                      "$kind": "Microsoft.SetProperty",
-                      "$designer": {
-                        "id": "IZkHzY"
-                      },
-                      "property": "user.lang",
-                      "value": "fr"
-                    },
-                    {
-                      "$kind": "Microsoft.SendActivity",
-                      "$designer": {
-                        "id": "LhlKOx"
-                      },
-                      "activity": "${SendActivity_LhlKOx()}"
-                    }
-                  ]
+                  "activityProcessed": true,
+                  "dialog": "Greetings"
                 }
               ]
             }

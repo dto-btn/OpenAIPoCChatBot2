@@ -16,6 +16,13 @@
       },
       "actions": [
         {
+          "$kind": "Microsoft.DeleteProperty",
+          "$designer": {
+            "id": "bvrbrD"
+          },
+          "property": "user.prompt"
+        },
+        {
           "$kind": "Microsoft.IfCondition",
           "$designer": {
             "id": "BqH8AI"
@@ -53,6 +60,23 @@
               "defaultValueResponse": "",
               "prompt": "${TextInput_Prompt_Lmc2gV()}",
               "property": "user.prompt"
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "MmQ60n"
+          },
+          "condition": "=turn.activity.text == \"resetSession\"",
+          "actions": [
+            {
+              "$kind": "Microsoft.ReplaceDialog",
+              "$designer": {
+                "id": "unoPgz"
+              },
+              "activityProcessed": true,
+              "dialog": "Greetings"
             }
           ]
         },
@@ -133,13 +157,6 @@
           },
           "activity": "${SendActivity_0rAY5k()}",
           "disabled": true
-        },
-        {
-          "$kind": "Microsoft.DeleteProperty",
-          "$designer": {
-            "id": "7nTagq"
-          },
-          "property": "user.prompt"
         },
         {
           "$kind": "Microsoft.RepeatDialog",

@@ -27,11 +27,18 @@
 [HeroCard
     text = ${join(foreach(turn.results.content.metadata, x, replace("[_X_](_X_)","_X_",x)), ", \n\n")}
     title = Source(s)
-    buttons = ${ShowFeedbackButton()}
+    buttons = ${ShowFeedbackButton()} | ${ShowResetButton()}
 ]
+# ShowResetButton()
+[CardAction
+    title = Nouvelle/New session
+    type = postBack
+    value = resetSession
+]
+
 # ShowFeedbackButton()
 [CardAction
-    title = Commentaire/Feedback
+    title = Commentaire(s)/Feedback
     type = openUrl
     value = https://forms.office.com/r/dPvsZykMSy
 ]
