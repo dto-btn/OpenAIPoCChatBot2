@@ -26,3 +26,7 @@ with:
 This should be automated in a github ci flow.
 
 As of now this project is pulled directly from github via terraform and deployed to the windows App Service app.
+
+## Documentation
+
+* [Prebuilt functions](https://learn.microsoft.com/en-us/azure/bot-service/adaptive-expressions/adaptive-expressions-prebuilt-functions?view=azure-bot-service-4.0)

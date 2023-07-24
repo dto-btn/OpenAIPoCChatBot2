@@ -25,7 +25,7 @@
 
 # ResponseCard(content)
 [HeroCard
-    text = ${join(foreach(turn.results.content.metadata, x, x), ", \n\n")}
+    text = ${join(foreach(turn.results.content.metadata, x, replace("[_X_](_X_)","_X_",x)), ", \n\n")}
     title = Source(s)
     buttons = ${ShowFeedbackButton()}
 ]
