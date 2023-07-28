@@ -25,9 +25,9 @@
 
 # ResponseCard(content)
 [HeroCard
-    text = ${join(foreach(turn.results.content.metadata, x, replace("[_X_](_X_)","_X_",x)), ", \n\n")}
+    text = ${join(foreach(turn.results.content.metadata, x,x), ", \n\n")}
     title = Source(s)
-    buttons = ${ShowFeedbackButton()} | ${ShowResetButton()}
+    buttons = ${ShowFeedbackButton()} | ${ShowWebsite()}
 ]
 # ShowResetButton()
 [CardAction
@@ -41,6 +41,12 @@
     title = Commentaire(s)/Feedback
     type = openUrl
     value = https://forms.office.com/r/dPvsZykMSy
+]
+# ShowWebsite()
+[CardAction
+    title = Site web/Website
+    type = openUrl
+    value = https://scdc-cio-openai-chatbot-pilot-frontend-wa.azurewebsites.net/
 ]
 # SendActivity_bdOB2G_attachment_DtQFvK()
 - ${ResponseCard(turn.results.content)}
