@@ -5,16 +5,16 @@
     "id": "243f8dd8-e985-45dc-a214-8725c77468c1",
     "developer": {
         "name": "SSC/CIO/DTO/ECT",
-        "websiteUrl": "https://www.canada.ca/en/shared-services.html",
+        "websiteUrl": "https://scdc-cio-openai-chatbot-pilot-frontend-wa.azurewebsites.net/",
         "privacyUrl": "https://www.teams.com/privacy",
         "termsOfUseUrl": "https://www.teams.com/termsofuse"
     },
     "name": {
-        "short": "Azure OpenAI Chatbot",
-        "full": "Azure OpenAI Chatbot Pilot"
+        "short": "Robot conversationnel - Azure OpenAI - Chatbot",
+        "full": "Robot conversationnel - Azure OpenAI - Chatbot"
     },
     "description": {
-        "short": "Azure Open AI Chatbot pilot",
+        "short": "Azure OpenAI Chatbot pilot",
         "full": "Uses Azure OpenAI and Langchain and Llama index"
     },
     "icons": {
