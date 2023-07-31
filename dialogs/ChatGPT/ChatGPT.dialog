@@ -125,11 +125,29 @@
           "condition": "=json(turn.results.content.metadata) != \"\"",
           "actions": [
             {
-              "$kind": "Microsoft.SendActivity",
+              "$kind": "Microsoft.IfCondition",
               "$designer": {
-                "id": "yy1qbW"
+                "id": "kFanz1"
               },
-              "activity": "${SendActivity_yy1qbW()}"
+              "condition": "=user.lang== \"en\"",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "27BFZl"
+                  },
+                  "activity": "${SendActivity_27BFZl()}"
+                }
+              ],
+              "elseActions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "nl9oQw"
+                  },
+                  "activity": "${SendActivity_nl9oQw()}"
+                }
+              ]
             }
           ],
           "elseActions": [

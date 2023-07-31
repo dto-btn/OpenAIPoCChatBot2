@@ -29,6 +29,12 @@
     title = Source(s)
     buttons = ${ShowFeedbackButton()} | ${ShowWebsite()}
 ]
+# ResponseCardFr(content)
+[HeroCard
+    text = ${join(foreach(turn.results.content.metadata, x,x), ", \n\n")}
+    title = Source(s)
+    buttons = ${ShowFeedbackButtonFr()} | ${ShowWebsiteFr()}
+]
 # ShowResetButton()
 [CardAction
     title = Nouvelle/New session
@@ -38,13 +44,25 @@
 
 # ShowFeedbackButton()
 [CardAction
-    title = Commentaire(s)/Feedback
+    title = Feedback
     type = openUrl
     value = https://forms.office.com/r/dPvsZykMSy
 ]
 # ShowWebsite()
 [CardAction
-    title = Site web/Website
+    title = Website version of the chatbot
+    type = openUrl
+    value = https://scdc-cio-openai-chatbot-pilot-frontend-wa.azurewebsites.net/
+]
+# ShowFeedbackButtonFr()
+[CardAction
+    title = Commentaire(s)
+    type = openUrl
+    value = https://forms.office.com/r/dPvsZykMSy
+]
+# ShowWebsiteFr()
+[CardAction
+    title = Version web de l'argent conversationnel
     type = openUrl
     value = https://scdc-cio-openai-chatbot-pilot-frontend-wa.azurewebsites.net/
 ]
@@ -66,14 +84,6 @@
     value = ${{'user.feedback': 'text'}}
 ]
 
-# SendActivity_yy1qbW()
-[Activity
-    Text = ${SendActivity_yy1qbW_text()}
-    Attachments = ${SendActivity_yy1qbW_attachment_hWNgJ9()}
-]
-
-# SendActivity_yy1qbW_text()
-- ${turn.results.content.answer}
 # SendActivity_Q01s8E()
 [Activity
     Text = ${SendActivity_Q01s8E_text()}
@@ -81,8 +91,6 @@
 
 # SendActivity_Q01s8E_text()
 - ${turn.results.content.answer}
-# SendActivity_yy1qbW_attachment_hWNgJ9()
-- ${ResponseCard(turn.results.content)}
 # SendActivity_MpJrnY()
 [Activity
     Text = ${SendActivity_MpJrnY_text()}
@@ -94,3 +102,23 @@
 [Activity
     Type = typing 
 ]
+# SendActivity_27BFZl()
+[Activity
+    Text = ${SendActivity_27BFZl_text()}
+    Attachments = ${SendActivity_27BFZl_attachment_wgD7oG()}
+]
+
+# SendActivity_27BFZl_text()
+- ${turn.results.content.answer}
+# SendActivity_27BFZl_attachment_wgD7oG()
+- ${ResponseCard(turn.results.content)}
+# SendActivity_nl9oQw()
+[Activity
+    Text = ${SendActivity_nl9oQw_text()}
+    Attachments = ${SendActivity_nl9oQw_attachment_cz0MuF()}
+]
+
+# SendActivity_nl9oQw_text()
+- ${turn.results.content.answer}
+# SendActivity_nl9oQw_attachment_cz0MuF()
+- ${ResponseCardFr(turn.results.content)}
