@@ -1,7 +1,7 @@
 {
-    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
-    "manifestVersion": "1.16",
-    "version": "1.0.1",
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.14/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.14",
+    "version": "1.0.2",
     "id": "243f8dd8-e985-45dc-a214-8725c77468c1",
     "developer": {
         "name": "SSC/CIO/DTO/ECT",
@@ -10,12 +10,12 @@
         "termsOfUseUrl": "https://www.teams.com/termsofuse"
     },
     "name": {
-        "short": "Robot conversationnel - Azure OpenAI - Chatbot",
+        "short": "Azure OpenAI - Chatbot",
         "full": "Robot conversationnel - Azure OpenAI - Chatbot"
     },
     "description": {
-        "short": "Azure OpenAI Chatbot pilot",
-        "full": "Uses Azure OpenAI and Langchain and Llama index"
+        "short": "Pilote Robot conversationnel - Azure OpenAI - Chatbot Pilot",
+        "full": "Azure OpenAI (chatgpt3.5-turbo), Langchain, Llama_index"
     },
     "icons": {
         "outline": "outline.png",

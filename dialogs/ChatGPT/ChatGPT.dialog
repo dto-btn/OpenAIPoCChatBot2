@@ -163,14 +163,6 @@
         {
           "$kind": "Microsoft.SendActivity",
           "$designer": {
-            "id": "bdOB2G"
-          },
-          "activity": "${SendActivity_bdOB2G()}",
-          "disabled": true
-        },
-        {
-          "$kind": "Microsoft.SendActivity",
-          "$designer": {
             "id": "0rAY5k"
           },
           "activity": "${SendActivity_0rAY5k()}",
