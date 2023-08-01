@@ -17,17 +17,98 @@
 - What is your question?
 - How may I be of help?
 - What's on your mind?
-# SendActivity_bdOB2G()
-[Activity
-    Text = ${SendActivity_bdOB2G_text()}
-    Attachments = ${SendActivity_bdOB2G_attachment_DtQFvK()}
-]
-
 # ResponseCard(content)
 [HeroCard
     text = ${join(foreach(turn.results.content.metadata, x,x), ", \n\n")}
     title = Source(s)
     buttons = ${ShowFeedbackButton()} | ${ShowWebsite()}
+]
+
+# adaptivecardjson()
+
+- ```
+{
+    "type": "AdaptiveCard",
+    "body": [
+        {
+            "type": "TextBlock",
+            "size": "Medium",
+            "weight": "Bolder",
+            "text": "Source(s)"
+        },
+        {
+            "type": "TextBlock",
+            "text": "${join(foreach(turn.results.content.metadata, x, replace("[_X_](_X_)","_X_",x)), ", \n\n")}",
+            "wrap": true
+        },
+        {
+            "type": "ActionSet",
+            "actions": [
+                {
+                    "type": "Action.OpenUrl",
+                    "title": "Feedback",
+                    "url": "https://forms.office.com/r/dPvsZykMSy",
+                    "iconUrl": "https://cdn.forms.office.net/forms/images/favicon.ico"
+                },
+                {
+                    "type": "Action.OpenUrl",
+                    "title": "Website version of the chatbot",
+                    "url": "https://scdc-cio-openai-chatbot-pilot-frontend-wa.azurewebsites.net/",
+                    "iconUrl": "https://scdc-cio-openai-chatbot-pilot-frontend-wa.azurewebsites.net/favicon.ico"
+                }
+            ]
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.3"
+}
+```
+
+# adaptivecardjsonfr()
+
+- ```
+{
+    "type": "AdaptiveCard",
+    "body": [
+        {
+            "type": "TextBlock",
+            "size": "Medium",
+            "weight": "Bolder",
+            "text": "Source(s)"
+        },
+        {
+            "type": "TextBlock",
+            "text": "${join(foreach(turn.results.content.metadata, x, replace("[_X_](_X_)","_X_",x)), ", \n\n")}",
+            "wrap": true
+        },
+        {
+            "type": "ActionSet",
+            "actions": [
+                {
+                    "type": "Action.OpenUrl",
+                    "title": "Commentaire(s)",
+                    "url": "https://forms.office.com/r/dPvsZykMSy",
+                    "iconUrl": "https://cdn.forms.office.net/forms/images/favicon.ico"
+                },
+                {
+                    "type": "Action.OpenUrl",
+                    "title": "Version web de l'argent conversationnel",
+                    "url": "https://scdc-cio-openai-chatbot-pilot-frontend-wa.azurewebsites.net/",
+                    "iconUrl": "https://scdc-cio-openai-chatbot-pilot-frontend-wa.azurewebsites.net/favicon.ico"
+                }
+            ]
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.3"
+}
+```
+
+# ResponseCardFr(content)
+[HeroCard
+    text = ${join(foreach(turn.results.content.metadata, x,x), ", \n\n")}
+    title = Source(s)
+    buttons = ${ShowFeedbackButtonFr()} | ${ShowWebsiteFr()}
 ]
 # ShowResetButton()
 [CardAction
@@ -38,20 +119,28 @@
 
 # ShowFeedbackButton()
 [CardAction
-    title = Commentaire(s)/Feedback
+    title = Feedback
     type = openUrl
     value = https://forms.office.com/r/dPvsZykMSy
 ]
 # ShowWebsite()
 [CardAction
-    title = Site web/Website
+    title = Website version of the chatbot
     type = openUrl
     value = https://scdc-cio-openai-chatbot-pilot-frontend-wa.azurewebsites.net/
 ]
-# SendActivity_bdOB2G_attachment_DtQFvK()
-- ${ResponseCard(turn.results.content)}
-# SendActivity_bdOB2G_text()
-- ${turn.results.content.answer}
+# ShowFeedbackButtonFr()
+[CardAction
+    title = Commentaire(s)
+    type = openUrl
+    value = https://forms.office.com/r/dPvsZykMSy
+]
+# ShowWebsiteFr()
+[CardAction
+    title = Version web de l'argent conversationnel
+    type = openUrl
+    value = https://scdc-cio-openai-chatbot-pilot-frontend-wa.azurewebsites.net/
+]
 # SendActivity_0rAY5k()
 [Activity
     Text = ${SendActivity_0rAY5k_text()}
@@ -66,14 +155,6 @@
     value = ${{'user.feedback': 'text'}}
 ]
 
-# SendActivity_yy1qbW()
-[Activity
-    Text = ${SendActivity_yy1qbW_text()}
-    Attachments = ${SendActivity_yy1qbW_attachment_hWNgJ9()}
-]
-
-# SendActivity_yy1qbW_text()
-- ${turn.results.content.answer}
 # SendActivity_Q01s8E()
 [Activity
     Text = ${SendActivity_Q01s8E_text()}
@@ -81,8 +162,6 @@
 
 # SendActivity_Q01s8E_text()
 - ${turn.results.content.answer}
-# SendActivity_yy1qbW_attachment_hWNgJ9()
-- ${ResponseCard(turn.results.content)}
 # SendActivity_MpJrnY()
 [Activity
     Text = ${SendActivity_MpJrnY_text()}
@@ -94,3 +173,23 @@
 [Activity
     Type = typing 
 ]
+# SendActivity_27BFZl()
+[Activity
+    Text = ${SendActivity_27BFZl_text()}
+    Attachments = ${SendActivity_27BFZl_attachment_wgD7oG()}
+]
+
+# SendActivity_27BFZl_text()
+- ${turn.results.content.answer}
+# SendActivity_nl9oQw()
+[Activity
+    Text = ${SendActivity_nl9oQw_text()}
+    Attachments = ${SendActivity_nl9oQw_attachment_cz0MuF()}
+]
+
+# SendActivity_nl9oQw_text()
+- ${turn.results.content.answer}
+# SendActivity_nl9oQw_attachment_cz0MuF()
+- ${json(adaptivecardjsonfr())}
+# SendActivity_27BFZl_attachment_wgD7oG()
+- ${json(adaptivecardjson())}

@@ -32,3 +32,4 @@ As of now this project is pulled directly from github via terraform and deployed
 * [Prebuilt functions](https://learn.microsoft.com/en-us/azure/bot-service/adaptive-expressions/adaptive-expressions-prebuilt-functions?view=azure-bot-service-4.0)
 * [Policies control for MS Teams](https://learn.microsoft.com/en-us/microsoftteams/teams-app-permission-policies)
 * [Powershell commands to add users to group/policies](https://learn.microsoft.com/en-us/microsoftteams/assign-policies-users-and-groups#use-powershell)
+* [Designing Adaptive Cards](https://adaptivecards.io/designer)
