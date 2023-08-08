@@ -16,35 +16,12 @@
       },
       "actions": [
         {
-          "$kind": "Microsoft.Foreach",
+          "$kind": "Microsoft.BeginDialog",
           "$designer": {
-            "id": "518944",
-            "name": "Loop: for each item",
-            "comment": "For each member added to the conversation."
+            "id": "Vwondp"
           },
-          "itemsProperty": "turn.Activity.membersAdded",
-          "actions": [
-            {
-              "$kind": "Microsoft.IfCondition",
-              "$designer": {
-                "id": "641773",
-                "name": "Branch: if/else",
-                "comment": "Checks that that member added ID does not match the bot ID. This prevents the greeting message from being sent when the bot is added to a conversation."
-              },
-              "condition": "=string(dialog.foreach.value.id) != string(turn.Activity.Recipient.id)",
-              "actions": [
-                {
-                  "$kind": "Microsoft.BeginDialog",
-                  "$designer": {
-                    "id": "JtOXlT"
-                  },
-                  "activityProcessed": true,
-                  "dialog": "Greetings"
-                }
-              ]
-            }
-          ],
-          "value": "dialog.foreach.value"
+          "activityProcessed": true,
+          "dialog": "Greetings"
         },
         {
           "$kind": "Microsoft.BeginDialog",
