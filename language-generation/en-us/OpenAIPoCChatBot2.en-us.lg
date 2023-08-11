@@ -22,11 +22,11 @@
 ]
 
 # SendActivity_03frjH_text()
-- Welcome to the Azure OpenAI chatbot pilot! This chatbot is designed to help you with specific information such as MySSC+ and the CS Collective agreement. Please note that this chatbot is only available to people who have been selected as part of the pilot. If you are part of the pilot, you can access the chatbot at https://scdc-cio-openai-chatbot-pilot-frontend-wa.azurewebsites.net/.
+- Welcome to the Azure OpenAI Chatbot pilot! This chatbot uses artificial intelligence (AI) to leverage content from MySSC+ so you can easily find the information you're looking for! Please note that this chatbot is only available to people who have been selected as part of the pilot. If you are part of the pilot, you can access the chatbot at https://scdc-cio-openai-chatbot-pilot-frontend-wa.azurewebsites.net/.
 # SendActivity_IB4n0J()
 [Activity
     Text = ${SendActivity_IB4n0J_text()}
 ]
 
 # SendActivity_IB4n0J_text()
-- Bienvenue dans le pilote de chatbot Azure OpenAI ! Ce chatbot est conçu pour vous aider avec des informations spécifiques telles que MonSPC+ et la convention collective des CS. Veuillez noter que ce chatbot n'est disponible que pour les personnes qui ont été sélectionnées dans le cadre du pilote. Si vous faites partie du pilote, vous pouvez accéder au chatbot à l'adresse https://scdc-cio-openai-chatbot-pilot-frontend-wa.azurewebsites.net/.
+- Bienvenue dans le pilote Azure OpenAI Chatbot ! Ce chatbot utilise l'intelligence artificielle (IA) pour exploiter le contenu de MonSPC+ afin que vous puissiez facilement trouver les informations que vous recherchez ! Veuillez noter que ce chatbot n'est disponible que pour les personnes qui ont été sélectionnées dans le cadre du pilote. Si vous faites partie du pilote, vous pouvez accéder au chatbot à l'adresse https://scdc-cio-openai-chatbot-pilot-frontend-wa.azurewebsites.net/.
